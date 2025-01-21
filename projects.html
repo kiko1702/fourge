@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mainstyle.css">
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3f3f3;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            height: 400px;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .slider-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-container .after-image {
+            clip-path: inset(0 50% 0 0);
+            transition: clip-path 0.2s ease;
+        }
+
+        .slider {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #fff;
+            cursor: ew-resize;
+            z-index: 10;
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 50%;
+            left: -12px;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: -1;
+        }
+
+        .labels {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        .labels span {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+            z-index: -1;
+            height: auto;
+        }
+        .post-container{
+            display:flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            padding-top: 40px;
+            padding-bottom: 60px;
+            padding-left: 80px;
+            margin-right: 80px;            
+        }
+        .bomba-clat{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        padding-left: 30px;
+        width: 40%;
+        }
+
+        @media(max-width: 1150px){
+            .post-container {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .slider-container {
+                width: 100%;
+            }
+
+            .bomba-clat {
+                padding-top: 40px;
+                width: 100%;
+                display: block;
+            }
+
+            .bomba-clat p {
+                padding-right: 20px;
+            }
+        }
+
+        @media(max-width: 900px){
+            .post-container {
+                padding: 40px;
+                margin: 0px;
+            }
+            .slider-container {
+                height: 40vh;
+            }
+        }
+
+
+
+  </style>
+</head>
+<body>
+    <section id="header">
+        <img class="navbar-logo" src="images/Logo/Logo-rect.png" width="30px">
+        <div class="header">
+            <ul>
+                <div class="xcontainer">
+                    <img src="images/close.png" class="x" width="20px" onclick="closenav()">
+                </div>
+                <li class="li"><a href="index.html" class="current"> Home</a>
+                <li class="li"><a href="aboutus.html"> About us</a>
+                <li class="li"><a href="our projects.html"> Our projects</a>
+                <li class="li"><a href="contat us.html"> Contact us </a>
+            </ul>
+        </div>
+        <div class="mobile" onclick="navbar()">
+            <img src="images/bars.png" width="30px" class="mobilehamabar">
+        </div>
+    </section>
+
+    <section class="post-container">
+        <div class="bomba-clat">
+    <h1> Villa In Sodic</h1>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet mauris et augue consequat pharetra. Donec quis sapien vitae mauris facilisis interdum vitae vitae felis. Integer vel rutrum mi. Nullam tortor nunc, convallis eu imperdiet vel, vehicula dapibus mauris. Nulla mollis quis nisi ut auctor. Curabitur pharetra diam a orci cursus consectetur. Proin est ante, viverra sed hendrerit ac, commodo lobortis ligula. Maecenas mi mi, pulvinar quis pretium lacinia, volutpat ac ex. Sed sit amet maximus elit. Nullam interdum, est et malesuada semper, eros enim gravida lorem, vel vehicula augue eros in neque. Quisque efficitur eros non auctor pharetra. Donec eleifend dignissim elit in tincidunt</p>
+      </div>
+        <div class="slider-container">
+            <div class="labels">
+                <span class="spann">Before</span>
+                <span class="spann">After</span>
+            </div>
+            <img src="images/Projects/villa 179/After/179 - Palm hills 5 - Shot.jpg" alt="Before Image" class="before-image" width="30%">
+            <img src="images/Projects/villa 179/Before/7.jpg" alt="After Image" class="after-image" width="30%">
+            <div class="slider">
+                <div class="slider-handle"></div>
+            </div>
+        </div>
+     
+        
+    
+    </section>
+   
+    
+    <section class="footer">
+    <div class="logo-icon-container">
+        <div class="logo-container">
+            <img src="images/Logo/Logo-rect.png" width="100px">
+        </div>
+        <div class="footer-icons">
+        <a href=""><img src="images/f-i/instagram.svg" width="30px"></a>
+        <a href="https://facebook.com/fourge.com.eg"><img src="images/f-i/facebook.svg" width="30px"></a>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-nwd">
+        <p>&copy 2025 Fourge engineers and contractors. All rights reserved.</p>
+        <p>Site by <a href="https://www.Nativewebdesigns.com">NativeWebDesigns</a>.</p>
+    </div>
+</section>
+
+<script>
+    const sliderContainer = document.querySelector('.slider-container');
+        const slider = document.querySelector('.slider');
+        const afterImage = document.querySelector('.after-image');
+
+        let isDragging = false;
+
+        const onDrag = (e) => {
+            if (!isDragging) return;
+
+            const rect = sliderContainer.getBoundingClientRect();
+            let offsetX = e.clientX - rect.left;
+
+            if (offsetX < 0) offsetX = 0;
+            if (offsetX > rect.width) offsetX = rect.width;
+
+            const percentage = offsetX / rect.width * 100;
+
+            slider.style.left = `${percentage}%`;
+            afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+        };
+
+        slider.addEventListener('mousedown', () => (isDragging = true));
+        window.addEventListener('mouseup', () => (isDragging = false));
+        window.addEventListener('mousemove', onDrag);
+
+        sliderContainer.addEventListener('touchstart', () => (isDragging = true));
+        window.addEventListener('touchend', () => (isDragging = false));
+        window.addEventListener('touchmove', (e) => onDrag(e.touches[0]));
+</script>
+<script src="script.js">
+</script>
+</body>
+</html>

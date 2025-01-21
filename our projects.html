@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Fourge</title>
+    <link rel="icon" href="images/Logo/Logo.png">
+    <link rel="stylesheet" href="mainstyle.css">
+    <title> our projects </title>
+    <style>
+       
+    .flat{
+        transition: transform 3s ease;
+        object-fit: cover;
+        height:200px;
+        margin-right: 30px;
+        display:inline-block
+    }
+    .flat:hover{
+        transform: scale(1.03);
+    }
+    .villa{
+        transition: transform 3s ease;
+        margin-right:30px;
+        object-fit: cover;
+        width: 30%;
+    }
+    .villa:hover{
+        transform: scale(1.03);
+    }
+    .cottage{
+        transition: transform 2s ease;
+        height:200px;
+        object-fit: cover;
+    }
+    .cottage:hover{
+        transform: scale( 1.03)
+    }
+    .our-projects  {
+        font-weight: bold;
+        font-size: 50px;
+        padding-top: 30px;
+    }
+    .footer-nwd p {
+        font-size: 12.56px;
+        font-weight: 200;
+    }
+
+    #our-projects{
+        display: flex;
+        flex-direction: row;
+        padding-top: 40px;
+        padding: 80px 80px;
+    }
+
+    .img-cat {
+        width: 100%;
+    }
+
+    .project-container{
+            width: 30%;
+            outline: 1px solid lightgray;
+            border-radius: 16px;
+    }
+
+    .bomba-clat {
+        margin-right: 80px;
+    }
+
+    @media(max-width: 900px){
+        #our-projects{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #our-projects img{
+            width: 80%;
+            margin-right: 0;
+            margin-top: 30px;
+            border-radius: 12px;
+        }
+
+        #our-projects p {
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-bottom: 30px;
+        }
+
+        .project-container {
+            width: 80%;
+        }
+
+        #our-projects {
+            padding: 20px 20px;
+        }
+    }
+
+        #our-projects h3 {
+            font-size: 25px;
+        }
+
+        #our-projects p {
+            font-size: 12.56px;
+            font-weight: 200;
+            padding-bottom: 30px;
+        }
+
+        #our-projects img {
+            padding-top: 30px;
+            padding: 30px;
+            padding-right: 30px;
+            border-radius: 12px;
+        }
+
+        @media(max-width: 1150px) {
+            
+        }
+
+   </style>
+</head> 
+<body>
+ 
+
+    <section id="header">
+        <img class="navbar-logo" src="images/Logo/Logo-rect.png" width="10px">
+        <div class="header">
+            <ul>
+                <div class="xcontainer">
+                    <img src="images/close.png" class="x" width="20px" onclick="closenav()">
+                </div>
+                <li class="li"><a href="index.html" class="current"> Home</a>
+                <li class="li"><a href="aboutus.html"> About us</a>
+                <li class="li"><a href="our projects.html"> Our projects</a>
+                <li class="li"><a href="contat us.html"> Contact us </a>
+            </ul>
+            <div>
+            
+            </div>
+        </div>
+        <div class="mobile" onclick="navbar()">
+            <img src="images/bars.png" width="30px" class="mobilehamabar">
+        </div>
+    </section>
+  <h1 class="our-projects">Our projects<h1>
+    <div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+<section id="our-projects">
+    <div class="project-container">
+        <a href="projects.html" >
+            <img class="flat img-cat" src="images/Projects/villa 179/After/10-1.JPG" width="25%" height="auto">
+        </a>
+        <h3>
+            Villa in sodic
+        </h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+</section>
+</div>
+
+<script src="script.js"></script>
+<section class="footer">
+    <div class="logo-icon-container">
+        <div class="logo-container">
+            <img src="images/Logo/Logo-rect.png" width="100px">
+        </div>
+        <div class="footer-icons">
+        <a href=""><img src="images/f-i/instagram.svg" width="30px"></a>
+        <a href="https://facebook.com/fourge.com.eg"><img src="images/f-i/facebook.svg" width="30px"></a>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-nwd">
+        <p>&copy 2025 Fourge engineers and contractors. All rights reserved.</p>
+        <p>Site by <a href="https://www.Nativewebdesigns.com">NativeWebDesigns</a>.</p>
+    </div>
+</section>
+</body>
+</html>
+ 
